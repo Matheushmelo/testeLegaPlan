@@ -49,7 +49,7 @@ export default function Todos() {
                 label={task}
                 onComplete={() => completeTask(task)}
                 onDelete={() => deleteTask(task, false)}
-                isCompleted={false} // A tarefa não está concluída
+                isCompleted={false}
               />
             ))}
           </div>
@@ -62,7 +62,7 @@ export default function Todos() {
                 label={task}
                 onComplete={() => uncompleteTask(task)}
                 onDelete={() => deleteTask(task, true)}
-                isCompleted={true} // A tarefa está concluída
+                isCompleted={true}
               />
             ))}
           </div>

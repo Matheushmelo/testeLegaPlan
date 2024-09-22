@@ -15,40 +15,38 @@ const Tasks: React.FC<TasksProps> = ({ label, onComplete, onDelete, isCompleted 
   const [showModal, setShowModal] = useState(false);
 
   const handleCheckboxChange = () => {
-    onComplete(); // Chama a função de completar ou descompletar a tarefa
+    onComplete();
   };
 
   const handleDeleteClick = () => {
-    setShowModal(true); // Mostra o modal de confirmação
+    setShowModal(true);
   };
 
   const confirmDelete = () => {
-    onDelete(); // Chama a função de deletar a tarefa
-    setShowModal(false); // Fecha o modal
+    onDelete();
+    setShowModal(false);
   };
 
   const cancelDelete = () => {
-    setShowModal(false); // Fecha o modal sem excluir
+    setShowModal(false);
   };
 
   return (
     <div className={styles.tasks}>
       <div className="radios">
         <CustomCheckBox 
-          checked={isCompleted} // Usar a prop diretamente
+          checked={isCompleted}
           onChange={handleCheckboxChange}
         />
       </div>
       <p className={`${styles.nameTask} ${isCompleted ? styles.strikeThrough : ''}`}>{label}</p>
 
-      {/* Exibe o botão de deletar apenas para tarefas não concluídas */}
       {!isCompleted && (
         <button onClick={handleDeleteClick} className={styles.trashTaskButton}>
           <img src="/trash.png" alt="trash" className={styles.trashTask} />
         </button>
       )}
 
-      {/* Modal de confirmação de exclusão */}
       {showModal && (
         <div className={styles.modal}>
           <div className={styles.modalContent}>

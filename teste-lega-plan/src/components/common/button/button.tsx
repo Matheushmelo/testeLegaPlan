@@ -24,7 +24,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({ addTask }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (taskTitle.trim()) {
-      addTask(taskTitle); // Chama a função para adicionar a tarefa
+      addTask(taskTitle);
       closeModal();
     }
   };

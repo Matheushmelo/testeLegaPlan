@@ -9,7 +9,6 @@ export default function HeaderHome() {
       	<p className={styles.dateHeader}>Sexta, 20 de setembro de 2024</p>
 			</div>
 		</div>
-    
   )
 }
 
