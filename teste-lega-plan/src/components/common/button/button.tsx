@@ -3,7 +3,11 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
 
-const ModalButton: React.FC = () => {
+interface ModalButtonProps {
+  addTask: (taskTitle: string) => void;
+}
+
+const ModalButton: React.FC<ModalButtonProps> = ({ addTask }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [taskTitle, setTaskTitle] = useState('');
 
@@ -19,17 +23,18 @@ const ModalButton: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode fazer algo com o título da tarefa, como enviá-lo a um servidor ou adicionar à lista
-    console.log('Título da Tarefa:', taskTitle);
-    closeModal();
+    if (taskTitle.trim()) {
+      addTask(taskTitle); // Chama a função para adicionar a tarefa
+      closeModal();
+    }
   };
 
   return (
     <div className={styles.container}>
       <button onClick={openModal} className={styles.button}>
-        Abrir Modal
+        Adicionar nova tarefa
       </button>
-      
+
       {isModalOpen && (
         <div className={styles.modalBackdrop} onClick={closeModal}>
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
@@ -45,13 +50,13 @@ const ModalButton: React.FC = () => {
                 required 
               />
               <div className={styles.modalButtons}>
-							<button onClick={closeModal} className={styles.closeButton}>
-              	Cancelar
-            	</button>
-							<button type="submit" className={styles.submitButton}>
-              	Adicionar
-            	</button>
-						</div>
+                <button onClick={closeModal} className={styles.closeButton}>
+                  Cancelar
+                </button>
+                <button type="submit" className={styles.submitButton}>
+                  Adicionar
+                </button>
+              </div>
             </form>
           </div>
         </div>

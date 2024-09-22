@@ -92,3 +92,42 @@
 	font-weight: 400;
 	font-size: 16px;
 }
+
+@media (max-width: 320px) {
+	.modal{
+    width: 320px;
+  }
+
+  .modalInput{
+    width: 300px;
+  }
+}
+
+@media (max-width: 425px) {
+	.button {
+    width: 272px;
+    height: 51px;
+  }
+
+  .modal {
+    width: 425px;
+    height: 813px;
+  }
+
+  .modalButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .closeButton{
+    width: 272px;
+  }
+
+  .submitButton{
+    margin-top: 16px;
+    width: 272px;
+  }
+}
+

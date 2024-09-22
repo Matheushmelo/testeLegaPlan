@@ -26,9 +26,44 @@
 }
 
 .dateHeader{
-	width: 231px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 19.36px;
 	opacity: 0.5;
+}
+
+@media (max-width: 870px) {
+	.headerContainer{
+		justify-content: space-between;
+	}
+	.welcomeHeader{
+		font-size: 20px;
+	}
+
+	.dateHeader{
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 425px) {
+	.header{
+		margin: 24px 24px 24px 24px;
+		border-bottom: 1px solid #D7DDE9;
+		height: 114px;
+	}
+
+	.headerContainer{
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
+	}
+	.welcomeHeader{
+		font-size: 16px;
+		margin-top: 8px;
+	}
+
+	.dateHeader{
+		font-size: 16px;
+		margin-top: 8px;
+	}
 }

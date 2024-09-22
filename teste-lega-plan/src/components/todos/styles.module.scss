@@ -2,11 +2,12 @@
 	margin: 0px 56px 0px 56px;
 }
 
-.noTodos{
+.noTodosContainer{
   display: flex;
   align-items: center;
 	justify-content: center;
-  height: 90vh;
+  margin-top: 300px;
+  margin-bottom: 32px;
 }
 
 .noCompleteTasks{

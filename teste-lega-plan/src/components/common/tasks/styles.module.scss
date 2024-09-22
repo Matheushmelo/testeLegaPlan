@@ -10,6 +10,7 @@
 	&:hover{
 		border: none;
 		cursor: pointer;
+		background-color: #F7F9FD;
 	}
 }
 
@@ -34,10 +35,125 @@
 .trashTask{
 	width: 24px;
 	height: 24px;
-	margin-left: 100px;
 }
 
 .strikeThrough {
-	text-decoration: line-through; // Adiciona o efeito riscado
-	color: gray; // Você pode mudar a cor se desejar
+	text-decoration: line-through;
+	color: gray;
+}
+
+.trashTaskButton{
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+
+	&:hover{
+		transform: scale(1.03);
+	}
+}
+
+.modal {
+	position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.527);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+	z-index: 1000;
+	cursor: default;
+}
+  
+.modalContent {
+	width: 450px;
+	height: 232px;
+	margin-top: 276px;
+  background-color: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0px 24px 48px -12px #1018282E;
+  position: relative;
+	cursor: default;
+}
+
+.modalTitle{
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29.04px;
+}
+
+.modalDescription{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #0000008A;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+.modalCancelBtn{
+	width: 185px;
+	height: 51px;
+  background-color: #E7EEFB;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+	font-weight: 400;
+	font-size: 16px;
+
+	&:hover{
+		transform: scale(1.03);
+	}
+}
+
+.modalConfirmBtn{
+	width: 185px;
+	height: 51px;
+	padding: 16px 24px 16px 24px;
+	margin-left: 16px;
+	background: linear-gradient(to right, #D30707, #F05353);
+  color: white;
+	border: none;
+  border-radius: 8px;
+  cursor: pointer;
+	font-weight: 400;
+	font-size: 16px;
+
+	&:hover{
+		transform: scale(1.03);
+	}
+}
+
+@media (max-width: 425px) {
+	.modalContent{
+		width: 425px;
+		height: 813px;
+		margin-top: 0;
+	}
+
+	.modalButtons{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.modalCancelBtn{
+		width: 272px;
+		margin-bottom: 16px;
+	}
+
+	.modalConfirmBtn{
+		width: 272px;
+	}
+}
+
+@media (max-width: 320px) {
+	.tasks{
+		width: 272px;
+	}
 }
