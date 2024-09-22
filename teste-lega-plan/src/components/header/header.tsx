@@ -5,8 +5,8 @@ export default function HeaderHome() {
 		<div className={styles.header}>
 			<div className={styles.headerContainer}>
 				<img className={styles.logoHeader} src="\logo.png" alt="logoHeader"/>
-      	<p className={styles.welcomeHeader}>Bem-vindo de volta, Matheus</p>
-      	<p className={styles.dateHeader}>Sexta, 20 de setembro de 2024</p>
+      			<p className={styles.welcomeHeader}>Bem-vindo de volta, Matheus</p>
+      			<p className={styles.dateHeader}>Sexta, 20 de setembro de 2024</p>
 			</div>
 		</div>
   )
