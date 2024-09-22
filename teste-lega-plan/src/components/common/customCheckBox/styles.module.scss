@@ -1,0 +1,41 @@
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+  
+.checkboxInput {
+  display: none; // Esconde o checkbox padrão
+}
+  
+.checkboxSpan {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #D7DDE9;
+  border-radius: 4px;
+  background-color: #f0f0f0; // Cor de fundo padrão
+  margin-right: 8px; // Espaçamento entre o checkbox e o label
+  position: relative;
+  
+  &:hover {
+    background-color: #e0e0e0; // Cor ao passar o mouse
+  }
+}
+  
+.checkboxInput:checked + .checkboxSpan {// Cor quando selecionado
+  background-color: #A0DCF6;
+	border-color: #0796D3;
+}
+  
+.checkboxInput:checked + .checkboxSpan::after {
+  content: '';
+  position: absolute;
+	top: 0.6px;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid #0796D3;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

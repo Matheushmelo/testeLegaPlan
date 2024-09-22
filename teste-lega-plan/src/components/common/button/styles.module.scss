@@ -1,0 +1,94 @@
+.container {
+  position: relative;
+}
+  
+.button {
+  padding: 16px 24px 16px 24px;
+  background: linear-gradient(to right, #0796D3, #53C0F0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+	width: 450px;
+	&:hover {
+    transform: scale(1.01); 
+  }
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.527); // Cor de fundo com transparência
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px); // Desfoca o fundo
+}
+  
+.modal {
+	width: 450px;
+	height: 286px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px #1018282E;
+  position: relative;
+}
+
+.modalTitle{
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 29.04px;
+}
+
+.modalNameForm{
+	margin-top: 32px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19.36px;
+}
+
+.modalInput{
+	width: 386px;
+	height: 51px;
+	border: 1px solid #D7DDE9;
+	border-radius: 8px;
+	padding: 16px;
+	gap: 16px;
+	margin-top: 8px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19.36px;
+	color: #0000008F;
+}
+  
+.closeButton{
+	width: 185px;
+	height: 51px;
+  margin-top: 32px;
+  background-color: #E7EEFB;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.submitButton{
+	width: 185px;
+	height: 51px;
+	padding: 16px 24px 16px 24px;
+  margin-top: 32px;
+	margin-left: 16px;
+	background: linear-gradient(to right, #0796D3, #53C0F0);
+  color: white;
+	border: none;
+  border-radius: 8px;
+  cursor: pointer;
+	font-weight: 400;
+	font-size: 16px;
+}

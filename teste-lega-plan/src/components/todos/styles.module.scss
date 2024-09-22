@@ -1,0 +1,34 @@
+.todos{
+	margin: 0px 56px 0px 56px;
+}
+
+.noTodos{
+  display: flex;
+  align-items: center;
+	justify-content: center;
+  height: 90vh;
+}
+
+.noCompleteTasks{
+  opacity: 0.5;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.completeTasks{
+  opacity: 0.5;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.listTask{
+  border: 1px dashed #D7DDE9;
+}
+
+.tasks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}

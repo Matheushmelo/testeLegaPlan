@@ -1,0 +1,43 @@
+.tasks{
+  border: 1px dashed #D7DDE9;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	width: 386px;
+	height: 56px;
+	padding: 16px;
+	margin-bottom: 24px;
+	&:hover{
+		border: none;
+		cursor: pointer;
+	}
+}
+
+.checkTask{
+	width: 24px;
+	height: 24px;
+}
+
+.checkTask input{
+	border-color: red;
+}
+
+.nameTask{
+	width: 274px;
+	height: 24px;
+	margin-left: 16px;
+	font-weight: 400;
+	color: black;
+	font-size: 18px;
+}
+
+.trashTask{
+	width: 24px;
+	height: 24px;
+	margin-left: 100px;
+}
+
+.strikeThrough {
+	text-decoration: line-through; // Adiciona o efeito riscado
+	color: gray; // Você pode mudar a cor se desejar
+}
